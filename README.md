@@ -56,7 +56,6 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Coming soon](#)
@@ -85,8 +84,8 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-- `git clone https://github.com/NahnahAJ/Metrics-Web-App.git` if your're using https or git 
-- `git@github.com:NahnahAJ/Metrics-Web-App.git` if you prefer ssh and hit enter.
+- `git clone https://github.com/NahnahAJ/Vet-clinic-database.git` if your're using https or git 
+- `git@github.com:NahnahAJ/Vet-clinic-database.git` if you prefer ssh and hit enter.
 - create a directory in your preferred location (e.g in the Desktop or Document directory)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -112,7 +111,6 @@ Clone this repository to your desired folder:
 
 > To be added later
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -134,7 +132,6 @@ Feel free to check the [issues page](../../issues/).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
-
 ## 🙏 Acknowledgments & Attribution <a name="acknowledgements"></a>
 
 - I would like to thank Microverse.
@@ -143,7 +140,6 @@ Feel free to check the [issues page](../../issues/).
 - etc
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 
