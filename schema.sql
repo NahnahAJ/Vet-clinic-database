@@ -1,4 +1,5 @@
 /* Database schema to keep the structure of entire database. */
+-- Add a column species of type string to your animals table. Modify your schema.sql file.
 
 CREATE TABLE animals (
     name VARCHAR(250),
@@ -9,3 +10,5 @@ CREATE TABLE animals (
     weight_kg DECIMAL,
     PRIMARY KEY(id)
 );
+
+ALTER TABLE animals ADD species varchar(255);
