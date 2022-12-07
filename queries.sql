@@ -31,8 +31,11 @@ BEGIN;
 UPDATE ANIMALS
 -- Inside a transaction update the animals table by setting the species column to unspecified. 
 SET species = 'unspecified';
+SELECT species FROM animals; -- verify that change was made
 -- rollback the change
 ROLLBACK;
+SELECT species FROM animals; -- verify that change was undone
+
 
 
 -- Inside a transaction:
@@ -41,9 +44,12 @@ BEGIN;
 UPDATE ANIMALS SET SPECIES = 'digimon' WHERE NAME LIKE '%mon';
 -- Update the animals table by setting the species column to pokemon for all animals that don't have species already set.
 UPDATE ANIMALS SET SPECIES = 'pokemon' WHERE species IS NULL;
+SELECT species from animals; -- verify that change was made
 -- Commit the transaction.
 COMMIT;
 -- Verify that change was made and persists after commit.
+SELECT species from animals;
+
 
 
 -- Inside a transaction:
@@ -51,7 +57,11 @@ BEGIN;
 -- Now, take a deep breath and... Inside a transaction delete all records in the animals table, then roll back the transaction.
 DELETE FROM animals; 
 -- After the rollback verify if all records in the animals table still exists. After that, you can start breathing as usual ;)
+SELECT * FROM animals; -- verify that change was made
+-- rollback the change
 ROLLBACK;
+SELECT * FROM animals; -- verify that change was undone
+
 
 
 -- Inside a transaction:
