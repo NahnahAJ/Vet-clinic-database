@@ -76,8 +76,10 @@ UPDATE ANIMALS SET weight_kg = weight_kg * -1;
 ROLLBACK TO SAVEPOINT_ONE;
 -- Update all animals' weights that are negative to be their weight multiplied by -1.
 UPDATE ANIMALS SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+SELECT * FROM ANIMALS; --verify that the changes were made
 -- Commit transaction
 COMMIT;
+SELECT * FROM ANIMALS; -- verify that the changes were undone
 
 
 -- Write queries to answer the following questions:
