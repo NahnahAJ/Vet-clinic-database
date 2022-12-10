@@ -134,7 +134,7 @@ JOIN animals A ON V.animal_id = A.id
 WHERE V.vets_id = 1 ORDER BY V.date_of_visit DESC LIMIT 1;
 
 -- How many different animals did Stephanie Mendez see?
-SELECT COUNT(*) FROM visits WHERE vets_id = 2
+SELECT COUNT(*) AS number_of_animals FROM visits WHERE vets_id = 2
 
 -- List all vets and their specialties, including vets with no specialties.
 SELECT V.name AS vet_name, S.vets_id, SP.name AS specialization, S.species_id AS specialization_id 
