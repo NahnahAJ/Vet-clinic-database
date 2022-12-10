@@ -54,3 +54,28 @@ ADD CONSTRAINT const_two
 FOREIGN KEY (owner_id) 
 REFERENCES owners (id)
 ON DELETE CASCADE;
+
+-- Create a table named vets with the following columns:
+CREATE TABLE vets(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(255) NOT NULL,
+  age INT,
+  date_of_graduation DATE,
+  PRIMARY KEY(id)
+);
+
+-- There is a many-to-many relationship between the tables species and vets: a vet can specialize in multiple species, and a species can have multiple vets specialized in it. Create a "join table" called specializations to handle this relationship.
+CREATE TABLE specializations(
+  species_id INT REFERENCES species (id) ON DELETE CASCADE,
+  vets_id INT REFERENCES vets (id) ON DELETE CASCADE,
+  PRIMARY KEY (species_id, vets_id)
+);
+
+-- There is a many-to-many relationship between the tables animals and vets: an animal can visit multiple vets and one vet can be visited by multiple animals. Create a "join table" called visits to handle this relationship, it should also keep track of the date of the visit.
+CREATE TABLE visits(
+  id INTEGER GENERATED ALWAYS AS IDENTITY,
+  animal_id INT REFERENCES animals(id) ON DELETE CASCADE,
+  vets_id INT REFERENCES vets(id) ON DELETE CASCADE,
+  date_of_visit DATE,
+  PRIMARY KEY (id)
+);
